@@ -2,10 +2,12 @@ version: '3.9'
 
 services:
   db:
-    image: postgres
+    image: postgres:latest
     environment:
       - 'POSTGRES_HOST_AUTH_METHOD=trust'
     restart: always
+    ports:
+      - '5432:5432'
   web:
     depends_on:
       - db

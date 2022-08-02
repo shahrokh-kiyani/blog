@@ -1,5 +1,8 @@
 FROM python:latest
 
+ENV PYTHONDONTWRITEBYTECODEBYDEFAULT=1
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /code/
 
 # Install dependencies
