@@ -1,6 +1,7 @@
 # ignored folders
 venv/
 .idea/
+__pycache__/
 # ignored files
 settings.py
 .env
