@@ -1,0 +1,6 @@
+# ignored folders
+venv/
+# ignored files
+settings.py
+.env
+
