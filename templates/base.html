@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
 <head>
@@ -12,31 +14,31 @@
     <title>{% block title %}{% endblock title %}</title>
 
     <!--===== Favicon =====-->
-    <link href="images/favicon.ico" rel="shortcut icon"/>
+    <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon"/>
 
     <!--===== Google fonts =====-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Jost:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
 
     <!--===== Global bootstrap required css =====-->
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
 
     <!--===== Global styles including: Font Icons, Plugins, etc =====-->
-    <link href="css/font-awesome/all.min.css" rel="stylesheet">
-    <link href="css/feather/iconfont.css" rel="stylesheet">
-    <link href="css/pe-icon-stroke/Pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="css/simple-line-icons/simple-line-icons.css" rel="stylesheet">
-    <link href="css/themify-icons/themify-icons.css" rel="stylesheet">
-    <link href="css/pe-icon-stroke/Pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="css/swiper/swiper.min.css" rel="stylesheet">
-    <link href="css/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="css/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="{% static 'css/font-awesome/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/feather/iconfont.css' %}" rel="stylesheet">
+    <link href="{% static 'css/pe-icon-stroke/Pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <link href="{% static 'css/simple-line-icons/simple-line-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themify-icons/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/pe-icon-stroke/Pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <link href="{% static 'css/swiper/swiper.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mCustomScrollbar/jquery.mCustomScrollbar.min.css' %}" rel="stylesheet">
 
     <!--===== Main theme css =====-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!--===== Custom Font css =====-->
-    <link href="css/custom-font.css" media="all" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/custom-font.css' %}" media="all" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -53,7 +55,7 @@
         <div class="container-fluid">
 
             <!--===== Start of logo =====-->
-            <a class="navbar-brand" href="index.html"> <img alt="" class="logo" src="images/logo-light.svg"> </a>
+            <a class="navbar-brand" href="index.html"> <img alt="" class="logo" src="{% static 'images/logo-light.svg' %}"> </a>
             <!--===== End of logo =====-->
 
             <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
@@ -767,15 +769,6 @@
 <!--========== 
   End of header ==========-->
 
-
-
-
-<!--========== Start of main content ==========-->
-
-{% block content %}{% endblock content %}
-
-<!--========== End of main content ==========-->
-
 <!--========== 
   Start of back to top section ==========-->
 
@@ -791,21 +784,21 @@
   Start of Javascript ==========-->
 
 <!--===== Global required js =====-->
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
 
 <!--===== Global script: js libraries and plugins =====-->
-<script src="js/appear/jquery.appear.js"></script>
-<script src="js/swiper/swiper.min.js"></script>
-<script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="js/isotope/isotope.pkgd.min.js"></script>
-<script src="js/typer/typer.js"></script>
-<script src="js/jarallax/jarallax.min.js"></script>
-<script src="js/mCustomScrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script src="{% static 'js/appear/jquery.appear.js' %}"></script>
+<script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+<script src="{% static 'js/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/typer/typer.js' %}"></script>
+<script src="{% static 'js/jarallax/jarallax.min.js' %}"></script>
+<script src="{% static 'js/mCustomScrollbar/jquery.mCustomScrollbar.min.js' %}"></script>
 
 <!--===== Main theme script =====-->
-<script src="js/functions.js"></script>
+<script src="{% static 'js/functions.js' %}"></script>
 
 <!--==========
 End of Javascript ==========-->

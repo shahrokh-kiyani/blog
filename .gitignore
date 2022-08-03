@@ -1,8 +1,11 @@
 # ignored folders
+# static file ignored becuse the folder is to heavy
+static/
 venv/
 .idea/
 __pycache__/
 # ignored files
+*.sqlite3
 settings.py
 .env
 
