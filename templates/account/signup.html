@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    ساخت اکانت
+{% endblock title %}
+
+{% block content %}
+    <!--========== 
+  Start of Register Section ==========-->
+
+<section class="h-100 bg-light">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 justify-content-center">
+            <div class="col-lg-5 col-xl-4 text-center">
+                <a class="navbar-brand" href="index.html"> <img alt="Logo" class="logo" src="{% static 'images/logo.svg' %}"> </a>
+                <div class="bg-white rounded p-5 mt-4">
+                    <h2>ثبت نام</h2>
+
+                    <!--===== Start of form =====-->
+                    <form class="mt-4">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="mb-3 d-grid">
+                            <button class="btn btn-gradient btn-rounded" type="submit">ثبت نام</button>
+                        </div>
+                    </form>
+                    <!--===== End of form =====-->
+
+                </div>
+                <p class="mt-4">آیا از قبل یک حساب دارید؟<a href="{% url 'account_login' %}"> وارد شوید</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--========== 
+  End of Register Section ==========-->
+
+{% endblock content %}
