@@ -1,6 +1,7 @@
 # ignored folders
 # static file ignored becuse the folder is to heavy
 static/
+staticfiles/
 venv/
 .idea/
 __pycache__/

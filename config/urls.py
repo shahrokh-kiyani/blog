@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('pages.urls')),
 ]
 
-handler404 = 'pages.views.error404'
-handler500 = 'pages.views.error500'
+handler403 = 'pages.views.handler403'
+handler404 = 'pages.views.handler404'
+handler500 = 'pages.views.handler500'
