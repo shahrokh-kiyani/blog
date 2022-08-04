@@ -18,7 +18,8 @@
                     <h2>ثبت نام</h2>
 
                     <!--===== Start of form =====-->
-                    <form class="mt-4">
+                    <p>{{ form.non_filed_errors }}</p>
+                    <form class="mt-4" method="POST" >
                         {% csrf_token %}
                         {{ form.as_p }}
                         <div class="mb-3 d-grid">
