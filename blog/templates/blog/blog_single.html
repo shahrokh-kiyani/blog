@@ -1,0 +1,490 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+صفحه جزییات
+{% endblock title %}
+
+{% block content %}
+
+
+<!--========== 
+  Start of Blog details section ==========-->
+
+<section class="slice-pt blog-single">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="blog-post blog-post-simple">
+                    <div class="blog-image mb-4">
+                        <img alt="" class="img-fluid rounded" src="images/blog/01.jpg">
+                    </div>
+                    <div class="blog-caption p-0 mt-5">
+                        <ul class="blog-meta list-unstyled mb-2">
+                            <li><a href="#">کسب و کار</a></li>
+                            <li><a href="#">موسیقی</a></li>
+                        </ul>
+                        <h2 class="mb-1"> مهم این نیست که زمین بخوری، مهم این است که بلند شوی</h2>
+                        <div class="blog-author d-flex mt-4 align-items-center">
+                            <a class="text-dark me-2" href="#">توسط کتلون بیرد</a>
+                            <span class="d-block">5<i class="feather icon-clock me-1"></i> دقیقه مطالعه</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <p class="mt-4">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
+                    آینده
+                </p>
+                <figure class="my-5 position-relative">
+                    <blockquote class="blockquote">
+                        <p class="text-dark">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                            شرایط فعلی تکنولوژی مورد نیاز</p>
+                        <div class="blockquote-footer mt-4 text-primary">
+                            <b> شخصی معروف در <cite title="Source Title">عنوان منبع</cite></b>
+                        </div>
+                    </blockquote>
+                </figure>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                </p>
+                <div class="row">
+                    <div class="col-6 my-4">
+                        <img alt="" class="img-fluid rounded" src="images/blog/split/04.jpg">
+                    </div>
+                    <div class="col-6 my-4">
+                        <img alt="" class="img-fluid rounded" src="images/blog/split/02.jpg">
+                    </div>
+                </div>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                </p>
+                <div class="d-flex flex-wrap align-items-center mt-5">
+                    <h6 class="mb-sm-0 me-2">برچسب ها:</h6>
+                    <ul class="blog-tag mb-0">
+                        <li><a href="#"> طراحی </a></li>
+                        <li><a href="#"> بروزرسانی ها </a></li>
+                        <li><a href="#"> نمونه کار </a></li>
+                        <li><a href="#"> وبلاگ </a></li>
+                    </ul>
+                </div>
+                <div class="bg-light d-flex mt-5 p-4 p-sm-5">
+                    <img alt="" class="img-fluid rounded-circle avatar-40" src="images/avatar/05.jpg">
+                    <div class="ms-4">
+                        <h5>جنیفر آک استا</h5>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <div class="social-icons icons-sm">
+                            <a class="icon" href="#!"> <i class="fab fa-facebook-f"></i> </a>
+                            <a class="icon" href="#!"> <i class="fab fa-twitter"></i> </a>
+                            <a class="icon" href="#!"> <i class="fab fa-pinterest"></i> </a>
+                            <a class="icon" href="#!"> <i class="fab fa-instagram"></i> </a>
+                            <a class="icon" href="#!"> <i class="fab fa-dribbble"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h5 class="mb-4">مطالب اخیر</h5>
+                    <div class="row">
+                        <div class="col-12 mb-6">
+                            <div class="swiper-container swiper-container-auto" data-auto-height="false"
+                                data-auto-speed="2500" data-autoplay="true" data-disable-on-touch="false"
+                                data-dots="true" data-loop="true" data-mobile-slidesPerView="1" data-navigation="true"
+                                data-pagination="true" data-slidesPerView="2" data-spaceBetween="12"
+                                data-tablet-slidesPerView="2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!--===== Start of blog =====-->
+                                        <div class="blog-post">
+                                            <div class="blog-image">
+                                                <img alt="" class="img-fluid" src="images/blog/01.jpg">
+                                                <div class="blog-meta-comments">
+                                                    <a class="blog-like" href="#"> <i
+                                                            class="feather icon-heart pe-1"></i> 25 </a>
+                                                    <a class="blog-comments" href="#"> <i
+                                                            class="feather icon-message-circle pe-1"></i> 12 </a>
+                                                </div>
+                                            </div>
+                                            <div class="blog-caption">
+                                                <ul class="blog-meta list-unstyled mb-3">
+                                                    <li><a href="#">کسب و کار,</a></li>
+                                                    <li><a href="#">موسیقی</a></li>
+                                                </ul>
+                                                <h5 class="mb-3"><a href="#">افرادی که آنقدر دیوانه هستند که فکر می کنند
+                                                        می توانند دنیا را تغییر دهند.</a></h5>
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است</p>
+                                                <div class="blog-author d-flex mt-4 align-items-center">
+                                                    <img alt="" class="img-fluid rounded-circle avatar-40"
+                                                        src="images/avatar/05.jpg">
+                                                    <div class="ms-3">
+                                                        <a class="text-dark" href="#">کوب تیلور</a>
+                                                        <small class="d-block">10 خرداد 1401</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--===== End of blog =====-->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!--===== Start of blog =====-->
+                                        <div class="blog-post">
+                                            <div class="blog-image">
+                                                <img alt="" class="img-fluid" src="images/blog/02.jpg">
+                                                <div class="blog-meta-comments">
+                                                    <a class="blog-like" href="#"> <i
+                                                            class="feather icon-heart pe-1"></i> 25 </a>
+                                                    <a class="blog-comments" href="#"> <i
+                                                            class="feather icon-message-circle pe-1"></i> 12 </a>
+                                                </div>
+                                            </div>
+                                            <div class="blog-caption">
+                                                <ul class="blog-meta list-unstyled mb-3">
+                                                    <li><a href="#">شخصی,</a></li>
+                                                    <li><a href="#">استدیو</a></li>
+                                                </ul>
+                                                <h5 class="mb-3"><a href="#">شما از شکست بیشتر یاد می گیرید تا از
+                                                        موفقیت.</a></h5>
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است</p>
+                                                <div class="blog-author d-flex mt-4 align-items-center">
+                                                    <img alt="" class="img-fluid rounded-circle avatar-40"
+                                                        src="images/avatar/05.jpg">
+                                                    <div class="ms-3">
+                                                        <a class="text-dark" href="#">اسکی پترز</a>
+                                                        <small class="d-block">15 خرداد 1401</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--===== End of blog =====-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-xl-4 offset-xl-1">
+                <div class="main-sidebar">
+                    <div class="widget mb-5">
+                        <h5 class="widget-title">جستجو</h5>
+                        <form class="mb-3 widget-search">
+                            <input class="form-control" placeholder="جستجو برای چیزی ..." type="email">
+                            <a class="search-icon" href="#"> <i class="feather icon-search"></i> </a>
+                        </form>
+                    </div>
+                    <div class="widget mb-5">
+                        <h5 class="widget-title">آخرین مطالب</h5>
+                        <div class="blog-post blog-post-simple mb-3">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="blog-image">
+                                        <img alt="" class="img-fluid rounded" src="images/blog/01.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="blog-caption p-0 mt-md-0 mt-3">
+                                        <h6 class="mb-1"><a href="#"> خلاقیت داشتن هوش است.</a></h6>
+                                        <div class="blog-author d-flex flex-wrap mt-0 align-items-center">
+                                            <a class="text-dark me-2" href="#">توسط لوییز باس</a>
+                                            <span class="d-block">10<i class="feather icon-clock me-1"></i> دقیقه زمان
+                                                مطالعه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="blog-post blog-post-simple mb-3">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="blog-image">
+                                        <img alt="" class="img-fluid rounded" src="images/blog/02.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="blog-caption p-0 mt-md-0 mt-3">
+                                        <h6 class="mb-1"><a href="#"> یا شما اجرا می کنید یا روز.</a></h6>
+                                        <div class="blog-author d-flex flex-wrap mt-0 align-items-center">
+                                            <a class="text-dark me-2" href="#">توسط جرومه مایو</a>
+                                            <span class="d-block">10<i class="feather icon-clock me-1"></i> دقیقه زمان
+                                                مطالعه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="blog-post blog-post-simple mb-3">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="blog-image">
+                                        <img alt="" class="img-fluid rounded" src="images/blog/03.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="blog-caption p-0 mt-md-0 mt-3">
+                                        <h6 class="mb-1"><a href="#"> آینده به چه چیزی بستگی دارد.</a></h6>
+                                        <div class="blog-author d-flex flex-wrap mt-0 align-items-center">
+                                            <a class="text-dark me-2" href="#">توسط جاستوس لوکاس</a>
+                                            <span class="d-block">10<i class="feather icon-clock me-1"></i> دقیقه زمان
+                                                مطالعه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="blog-post blog-post-simple mb-3">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="blog-image">
+                                        <img alt="" class="img-fluid rounded" src="images/blog/04.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="blog-caption p-0 mt-md-0 mt-3">
+                                        <h6 class="mb-1"><a href="#"> اجازه ندهید دیروز هم تسخیر شود.</a></h6>
+                                        <div class="blog-author d-flex flex-wrap mt-0 align-items-center">
+                                            <a class="text-dark me-2" href="#">توسط جورنی نیکسون</a>
+                                            <span class="d-block">10<i class="feather icon-clock me-1"></i> دقیقه زمان
+                                                مطالعه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget mb-5 text-center">
+                        <div class="widget-newsletter">
+                            <h5 class="widget-title">خبرنامه</h5>
+                            <h6 class="text-primary">به 50,000 مشترک ما بپیوندید!</h6>
+                            <form class="mt-4">
+                                <div class="form-group position-relative">
+                                    <input class="form-control" id="exampleInputEmail1"
+                                        placeholder="ایمیل خود را برای پیوستن وارد کنید" type="email">
+                                    <div class="d-grid">
+                                        <a class="btn btn-gradient rounded mt-2" href="#">ثبت نام</a>
+                                    </div>
+                                </div>
+                                <small class="form-text mt-3 text-muted d-block">به علاوه چیزی جز پیکسل های با کیفیت <a
+                                        href="#!"> <b> سیاست حریم خوصی! </b> </a></small>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="widget mb-5">
+                        <h5 class="widget-title">دسته بندی ها</h5>
+                        <ul class="widget-categories">
+                            <li><a href="#"> <i class="feather icon-chevrons-left text-primary pe-2"></i> طراحی
+                                    <span>(02)</span>
+                                </a></li>
+                            <li><a href="#"> <i class="feather icon-chevrons-left text-primary pe-2"></i> خلاق
+                                    <span>(12)</span> </a></li>
+                            <li><a href="#"> <i class="feather icon-chevrons-left text-primary pe-2"></i> استدیو
+                                    <span>(10)</span>
+                                </a></li>
+                            <li><a href="#"> <i class="feather icon-chevrons-left text-primary pe-2"></i> بروزرسانی ها
+                                    <span>(06)</span> </a></li>
+                            <li><a href="#"> <i class="feather icon-chevrons-left text-primary pe-2"></i> نمونه کار
+                                    <span>(15)</span> </a></li>
+                            <li><a href="#"> <i class="feather icon-chevrons-left text-primary pe-2"></i> وبلاگ
+                                    <span>(44)</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="widget mb-5">
+                        <h5 class="widget-title">برچسب ها</h5>
+                        <ul class="widget-tag">
+                            <li><a href="#"> طراحی </a></li>
+                            <li><a href="#"> خلاق </a></li>
+                            <li><a href="#"> استدیو </a></li>
+                            <li><a href="#"> بروزرسانی ها </a></li>
+                            <li><a href="#"> نمونه کار </a></li>
+                            <li><a href="#"> وبلاگ </a></li>
+                            <li><a href="#"> صفحات فرود </a></li>
+                            <li><a href="#"> تک صفحه ای </a></li>
+                            <li><a href="#"> مطالعه موردی </a></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h5 class="widget-title">جشن </h5>
+                        <div class="blog-post blog-post-overlay blog-post-news">
+                            <div class="blog-meta-comments">
+                                <a class="blog-like" href="#"> <i class="feather icon-heart pe-1"></i> 25 </a>
+                                <a class="blog-comments" href="#"> <i class="feather icon-message-circle pe-1"></i> 12
+                                </a>
+                            </div>
+                            <div class="blog-caption">
+                                <ul class="blog-meta list-unstyled mb-3">
+                                    <li><a href="#">بازاریابی,</a></li>
+                                    <li><a href="#">شخصی</a></li>
+                                </ul>
+                                <h5 class="mb-3"><a href="#">راه شروع این است که صحبت کردن را کنار بگذارید و شروع به
+                                        انجام دادن کنید.</a>
+                                </h5>
+                            </div>
+                            <div class="blog-box-img"
+                                style="background-image: url(images/portfolio/photography/02.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-3" />
+            <div class="row py-3">
+                <div class="col-md-4 text-center text-md-start">
+                    <a href="#">
+                        <span class="text-muted"><i class="feather icon-arrow-right pe-1"></i> مطلب قبلی </span>
+                        <h6> شما چه فکر کنی؟</h6>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="#">
+                        <span class="text-muted">برگشت به <i class="feather icon-arrow-left ps-1"></i></span>
+                        <h6>همه مطالب</h6>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#">
+                        <span class="text-muted">مطلب بعدی <i class="feather icon-arrow-left ps-1"></i></span>
+                        <h6>ممکن است با بسیاری از آنها مواجه شویم </h6>
+                    </a>
+                </div>
+            </div>
+            <hr class="mb-6" />
+        </div>
+    </div>
+    <div class="py-6 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5>03 نظر</h5>
+                    <div class="comments-list">
+                        <ul class="list-inline">
+                            <li class="comments">
+                                <div class="comment-avtar">
+                                    <div class="avatar">
+                                        <img alt="" class="img-fluid rounded-circle" src="images/avatar/01.jpg">
+                                    </div>
+                                </div>
+                                <div class="comment-info">
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <h6 class="mb-0">آیری ساتو</h6>
+                                        <a class="replay ms-2" href="#!"> پاسخ <i
+                                                class="feather icon-arrow-left"></i></a>
+                                    </div>
+                                    <span class="date">12 خرداد 1401</span>
+                                    <p class="mt-2 mb-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                        هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                        آینده</p>
+                                </div>
+                            </li>
+                            <li class="comments children">
+                                <div class="comment-avtar">
+                                    <div class="avatar">
+                                        <img alt="" class="img-fluid rounded-circle" src="images/avatar/02.jpg">
+                                    </div>
+                                </div>
+                                <div class="comment-info">
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <h6 class="mb-0">برونو ناش</h6>
+                                        <a class="replay ms-2" href="#!"> پاسخ <i
+                                                class="feather icon-arrow-left"></i></a>
+                                    </div>
+                                    <span class="date">10 اردیبهشت 1401</span>
+                                    <p class="mt-2 mb-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                        هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                        آینده</p>
+                                </div>
+                            </li>
+                            <li class="comments">
+                                <div class="comment-avtar">
+                                    <div class="avatar">
+                                        <img alt="" class="img-fluid rounded-circle" src="images/avatar/04.jpg">
+                                    </div>
+                                </div>
+                                <div class="comment-info">
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <h6 class="mb-0">جی وین جویس</h6>
+                                        <a class="replay ms-2" href="#!"> پاسخ <i
+                                                class="feather icon-arrow-left"></i></a>
+                                    </div>
+                                    <span class="date">02 فروردین 1401</span>
+                                    <p class="mt-2 mb-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                        سطرآنچنان که لازم است</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <h5>پاسخ دهید</h5>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label" for="exampleFormControlTextarea1">پیام</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                        placeholder="پیام خود را بنویسید" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            من شرایط و ضوابط را می پذیرم و می دانم که داده های من مطابق با خط مشی
+                                            رازداری به صورت ایمن نگهداری می شوند.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label class="form-label">نام</label>
+                                    <input aria-label="First name" class="form-control"
+                                        placeholder="نام خود را وارد کنید" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label class="form-label">ایمیل</label>
+                                    <input aria-label="Last name" class="form-control"
+                                        placeholder="ایمیل خود را وارد کنید" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label class="form-label">آدرس سایت</label>
+                                    <input aria-label="Last name" class="form-control"
+                                        placeholder="آدرس سایت را وارد کنید" type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a class="btn btn-warning rounded" href="#">ارسال نظر</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--========== 
+  End of blog section ==========-->
+
+
+{% endblock content %}

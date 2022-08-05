@@ -1,13 +1,11 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
-from ckeditor.fields import RichTextField
-
 
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, unique=True, null=True)
+    category_slug = models.SlugField(max_length=100, unique=True, null=True)
 
     def __str__(self):
         return self.name
