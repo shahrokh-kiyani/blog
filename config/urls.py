@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 handler403 = 'pages.views.handler403'
