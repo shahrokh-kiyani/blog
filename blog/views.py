@@ -5,10 +5,5 @@ from .models import Post
 
 class ListView(generic.ListView):
     model = Post
-    template_name = 'pages/home.html'
-    context_object_name = 'posts'
-
-class DetailView(generic.DetailView):
-    model = Post
-    template_name = 'blog/blog_signle.html'
+    template_name = 'blog/home.html'
     context_object_name = 'posts'
