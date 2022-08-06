@@ -10,5 +10,5 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'created_date', 'modified_date')
+    list_display = ('title', 'author', 'created_date', 'modified_date', 'category')
 
