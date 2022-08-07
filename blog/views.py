@@ -13,3 +13,4 @@ class DetailView(generic.DetailView):
     model = Post
     template_name = 'blog/blog_single.html'
     context_object_name = 'posts' 
+    

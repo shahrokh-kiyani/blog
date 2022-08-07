@@ -1,9 +1,7 @@
-from tabnanny import verbose
-from unicodedata import category
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
-
+from taggit.managers import TaggableManager
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='نام دسته بندی')
@@ -30,6 +28,7 @@ class Post(models.Model):
     modified_date = models.DateTimeField(auto_now=True, verbose_name='تاریخ تغییر')
     slug = models.SlugField(max_length=200, unique=True, null=True, verbose_name='آدرس')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, verbose_name='دسته بندی')
+    tags = TaggableManager(verbose_name='برچسب ها')
 
     class Meta:
         verbose_name = 'پست'

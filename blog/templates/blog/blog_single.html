@@ -69,10 +69,9 @@
                 <div class="d-flex flex-wrap align-items-center mt-5">
                     <h6 class="mb-sm-0 me-2">برچسب ها:</h6>
                     <ul class="blog-tag mb-0">
-                        <li><a href="#"> طراحی </a></li>
-                        <li><a href="#"> بروزرسانی ها </a></li>
-                        <li><a href="#"> نمونه کار </a></li>
-                        <li><a href="#"> وبلاگ </a></li>
+                        {% for tag in Post.tags.all %}
+                            <li><a href="#">{{ tag }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="bg-light d-flex mt-5 p-4 p-sm-5">
