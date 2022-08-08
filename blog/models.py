@@ -29,6 +29,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True, null=True, verbose_name='آدرس')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, verbose_name='دسته بندی')
     tags = TaggableManager(verbose_name='برچسب ها')
+    cover = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='تصویر')
 
     class Meta:
         verbose_name = 'پست'
