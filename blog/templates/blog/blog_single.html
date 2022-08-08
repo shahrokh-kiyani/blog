@@ -69,8 +69,8 @@
                 <div class="d-flex flex-wrap align-items-center mt-5">
                     <h6 class="mb-sm-0 me-2">برچسب ها:</h6>
                     <ul class="blog-tag mb-0">
-                        {% for tag in Post.tags.all %}
-                            <li><a href="#">{{ tag }}</a></li>
+                        {% for tag in post.tags.all %}
+                            <li><a href="#">{{ tag.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
