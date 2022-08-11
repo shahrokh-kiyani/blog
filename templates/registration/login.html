@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
-
+{% load static crispy_forms_tags %}
 
 {% block title %}
     لاگین
@@ -23,7 +22,7 @@
                     <form class="mt-4" method='POST'>
                         <div class="d-flex flex-wrap">
                             {% csrf_token %}
-                            {{ form.as_p }}
+                            {{ form|crispy }}
                             <div class="ms-sm-auto mb-3">
                                 <a class="" href="#"> رمز عبور را فراموش کرده اید؟</a>
                             </div>

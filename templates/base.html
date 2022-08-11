@@ -78,53 +78,61 @@
                         </li>
 
                         {% if user.is_authenticated %}
-                        <li class="nav-item dropdown mega-dropdown">
-                            <p class="nav-link nav-item"><span class="text-line">{{ user.username }}</span></p>
+                        <li class="nav-item dropdown ">
+                            {% comment %} <p class="nav-link nav-item"><span class="text-line">{{ user.username|title }}</span></p> {% endcomment %}
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" href="#" id="navbar-pages">
+                                <span class="text-line"> {{user.username|title}} </span>
+                            </a>
+                            <ul aria-labelledby="navbar-pages" class="dropdown-menu">
+                                <li>
+                                    <a href="{% url 'logout' %}"><span> خروج </span></a>                                </li>
+                            </ul>
                         </li>
 
                         {% else %}
-                            <li class="nav-item dropdown">
-                                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-                                    data-bs-toggle="dropdown" href="#" id="navbar-pages">
-                                    <span class="text-line"> صفحات </span>
-                                </a>
-                                <ul aria-labelledby="navbar-pages" class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> ورود
-                                            </span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="page-login.html"><span class="text-line">
-                                                        ورود </span></a></li>
-                                            <li><a class="dropdown-item" href="{% url 'login' %}"><span
-                                                        class="text-line"> ورود ساده </span></a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" href="#" id="navbar-pages">
+                                <span class="text-line"> صفحات </span>
+                            </a>
+                            <ul aria-labelledby="navbar-pages" class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> ورود
+                                        </span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="page-login.html"><span class="text-line">
+                                                    ورود </span></a></li>
+                                        <li><a class="dropdown-item" href="{% url 'login' %}"><span class="text-line">
+                                                    ورود ساده </span></a>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> ثبت نام
-                                            </span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="page-register.html"><span class="text-line">
-                                                        ثبت نام </span></a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="{% url 'signup' %}"><span
-                                                        class="text-line"> ثبت نام ساده </span></a></li>
-                                        </ul>
-                                    </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> ثبت نام
+                                        </span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="page-register.html"><span class="text-line">
+                                                    ثبت نام </span></a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="{% url 'signup' %}"><span class="text-line">
+                                                    ثبت نام ساده </span></a></li>
+                                    </ul>
+                                </li>
 
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> فراموشی
-                                                رمز عبور </span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="page-forgot-password.html"><span
-                                                        class="text-line"> فراموشی رمز عبور </span></a></li>
-                                            <li><a class="dropdown-item" href="page-forgot-password-simple.html"><span
-                                                        class="text-line"> فراموشی رمز عبور ساده </span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> فراموشی
+                                            رمز عبور </span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="page-forgot-password.html"><span
+                                                    class="text-line"> فراموشی رمز عبور </span></a></li>
+                                        <li><a class="dropdown-item" href="page-forgot-password-simple.html"><span
+                                                    class="text-line"> فراموشی رمز عبور ساده </span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         {% endif %}
                     </ul>
                 </div>

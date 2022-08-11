@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static crispy_forms_tags %}
 
 {% block title %}
     ساخت اکانت
@@ -18,10 +18,11 @@
                     <h2>ثبت نام</h2>
 
                     <!--===== Start of form =====-->
-                    <p>{{ form.non_filed_errors }}</p>
-                    <form class="mt-4" method="POST" >
-                        {% csrf_token %}
-                        {{ form.as_p }}
+                    <form class="mt-4" method="POST">
+                        <div class="mt-3" >
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                        </div>
                         <div class="mb-3 d-grid">
                             <button class="btn btn-gradient btn-rounded" type="submit">ثبت نام</button>
                         </div>

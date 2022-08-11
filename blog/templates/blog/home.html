@@ -20,10 +20,12 @@
                         <div class="row">
                             <div class="col-lg-2 text-lg-center mb-lg-0 mb-3">
                                 <div class="blog-post-img mb-3">
-                                    <img alt="" class="img-fluid rounded" src="{{ post.cover.url }}">
+                                    {% if post.cover %}
+                                        <img alt="" class="img-fluid rounded" src="{{ post.cover.url }}">
+                                    {% endif %}
                                 </div>
                                 <div class="blog-post-info">
-                                    <h6 class="mb-0"><a href="#">کوب تیلور</a></h6>
+                                    <h6 class="mb-0"><a href="#">{{ post.author|title }}</a></h6>
                                     <span>15 اسفند , 1400</span>
                                 </div>
                             </div>
@@ -32,8 +34,7 @@
                                     <h4><a href="{% url 'detail' post.slug %}">{{ post.title }}</a></h4>
                                     <ul class="other-info d-flex flex-wrap list-unstyled mt-3">
                                         <li class="pe-3">
-                                            <a href="#"><i class="far fa-folder-open pe-1"></i> موسیقی, </a>
-                                            <a href="#"> کسب و کار </a>
+                                            <a href="#"><i class="far fa-folder-open pe-1"></i>{{ post.category.name }}</a>
                                         </li>
                                         <li class="pe-3"><a href="#"><i class="far fa-comments pe-1"></i> نظر (10) </a>
                                         </li>
