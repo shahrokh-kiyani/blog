@@ -2,6 +2,8 @@
 # static file ignored becuse the folder is to heavy
 static/
 staticfiles/
+# Media FIles are ignored becuse the folder is just have temp files not important
+media/
 venv/
 .idea/
 __pycache__/
