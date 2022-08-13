@@ -62,18 +62,24 @@
                 <!--===== Start of pagination =====-->
                 <nav aria-label="...">
                     <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a aria-disabled="true" class="page-link" href="#" tabindex="-1"> <i
-                                    class="feather icon-arrow-right pe-2"></i> قبلی </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        {% if page_obj.has_previous %}
+                        
+                            <li class="page-item disabled">
+                                <a aria-disabled="true" class="page-link" href="?page{{ page_obj.previous_page_number }}" tabindex="-1"> <i
+                                        class="feather icon-arrow-right pe-2"></i> قبلی </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="?page{{ page_obj.previous_page_number }}">{{ page_obg.previous_page_number }}</a></li>
+                        {% endif %}
                         <li aria-current="page" class="page-item active">
-                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#">{{ page_obj.number }}</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">بعدی <i class="feather icon-arrow-left ps-2"></i></a>
-                        </li>
+
+                        {% if page_obj.has_next %}
+                            <li class="page-item"><a class="page-link" href="?page{{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page{{ page_obj.next_page_number }}">بعدی <i class="feather icon-arrow-left ps-2"></i></a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </nav>
                 <!--===== End of pagination =====-->
