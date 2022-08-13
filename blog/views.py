@@ -4,7 +4,7 @@ from django.views import generic
 from .models import Post
 
 class ListView(generic.ListView):
-    paginate_by = 3
+    paginate_by = 4
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
