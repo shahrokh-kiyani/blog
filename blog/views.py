@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views import generic
+from django.shortcuts import get_object_or_404
 
 from .models import *
 
 
-#class ListView For home page
 class ListView(generic.ListView):
     # Paginate for items per page
     paginate_by = 4
@@ -39,12 +39,20 @@ class CategoryListView(generic.ListView):
 
 
 # Category Detail View show all posts related to category
-class CategoryDetailView(generic.DetailView):
-    # Model category from models.py
-    model = Category
-    # template name in tepmlates/blog/category_detail.html
-    template_name = 'blog/category_detail.html'
-    # context name for template
-    context_object_name = 'category'
+# class CategoryDetailView(generic.DetailView):
+#     # Model category from models.py
+#     model = Category
+#     # template name in tepmlates/blog/category_detail.html
+#     template_name = 'blog/category_detail.html'
+#     # context name for template
+#     context_object_name = 'category'
 
-    def get
+def category_detail_view(request, slug):
+    category = Category.objects.get(slug=slug)
+    posts = Post.objects.filter(category=category)
+    context = {
+        'category': category,
+        'posts': posts
+    }
+    return render(request, 'blog/category_detail.html', context)
+    
