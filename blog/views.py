@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Post
+from .models import *
 
 
 #class ListView For home page
@@ -25,3 +25,26 @@ class DetailView(generic.DetailView):
     # Context name for template
     context_object_name = 'post' 
     
+
+# category list view show all categorys in site
+class CategoryListView(generic.ListView):
+    # Paginate for categorys 
+    paginate_by = 10
+    # model category from models.py
+    model = Category
+    # template name in tepmlates/blog/category_list.html
+    template_name = 'blog/category_list.html'
+    # context name for template
+    context_object_name = 'categories'
+
+
+# Category Detail View show all posts related to category
+class CategoryDetailView(generic.DetailView):
+    # Model category from models.py
+    model = Category
+    # template name in tepmlates/blog/category_detail.html
+    template_name = 'blog/category_detail.html'
+    # context name for template
+    context_object_name = 'category'
+
+    def get

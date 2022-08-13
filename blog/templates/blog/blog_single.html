@@ -17,7 +17,9 @@
             <div class="col-lg-7">
                 <div class="blog-post blog-post-simple">
                     <div class="blog-image mb-4">
-                        <img alt="" class="img-fluid rounded" src="images/blog/01.jpg">
+                        {% if post.cover %}
+                            <img alt="" class="img-fluid rounded" src="{{ post.cover.url }}">
+                        {% endif %}
                     </div>
                     <div class="blog-caption p-0 mt-5">
                         <ul class="blog-meta list-unstyled mb-2">
@@ -55,10 +57,10 @@
                 </p>
                 <div class="row">
                     <div class="col-6 my-4">
-                        <img alt="" class="img-fluid rounded" src="images/blog/split/04.jpg">
+                        <img alt="" class="img-fluid rounded" src="{% static 'images/blog/split/04.jpg' %}">
                     </div>
                     <div class="col-6 my-4">
-                        <img alt="" class="img-fluid rounded" src="images/blog/split/02.jpg">
+                        <img alt="" class="img-fluid rounded" src="{% static 'images/blog/split/02.jpg' %}">
                     </div>
                 </div>
                 <p>
@@ -74,7 +76,7 @@
                     </ul>
                 </div>
                 <div class="bg-light d-flex mt-5 p-4 p-sm-5">
-                    <img alt="" class="img-fluid rounded-circle avatar-40" src="images/avatar/05.jpg">
+                    <img alt="" class="img-fluid rounded-circle avatar-40" src="{% static 'images/avatar/05.jpg' %}">
                     <div class="ms-4">
                         <h5>جنیفر آک استا</h5>
                         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
@@ -101,7 +103,7 @@
                                         <!--===== Start of blog =====-->
                                         <div class="blog-post">
                                             <div class="blog-image">
-                                                <img alt="" class="img-fluid" src="images/blog/01.jpg">
+                                                <img alt="" class="img-fluid" src="{% static 'images/blog/01.jpg' %}">
                                                 <div class="blog-meta-comments">
                                                     <a class="blog-like" href="#"> <i
                                                             class="feather icon-heart pe-1"></i> 25 </a>
@@ -120,7 +122,7 @@
                                                     استفاده از طراحان گرافیک است</p>
                                                 <div class="blog-author d-flex mt-4 align-items-center">
                                                     <img alt="" class="img-fluid rounded-circle avatar-40"
-                                                        src="images/avatar/05.jpg">
+                                                        src="{% static 'images/avatar/05.jpg' %}">
                                                     <div class="ms-3">
                                                         <a class="text-dark" href="#">کوب تیلور</a>
                                                         <small class="d-block">10 خرداد 1401</small>
@@ -134,7 +136,7 @@
                                         <!--===== Start of blog =====-->
                                         <div class="blog-post">
                                             <div class="blog-image">
-                                                <img alt="" class="img-fluid" src="images/blog/02.jpg">
+                                                <img alt="" class="img-fluid" src="{% static 'images/blog/02.jpg' %}">
                                                 <div class="blog-meta-comments">
                                                     <a class="blog-like" href="#"> <i
                                                             class="feather icon-heart pe-1"></i> 25 </a>
@@ -153,7 +155,7 @@
                                                     استفاده از طراحان گرافیک است</p>
                                                 <div class="blog-author d-flex mt-4 align-items-center">
                                                     <img alt="" class="img-fluid rounded-circle avatar-40"
-                                                        src="images/avatar/05.jpg">
+                                                        src="{% static 'images/avatar/05.jpg' %}">
                                                     <div class="ms-3">
                                                         <a class="text-dark" href="#">اسکی پترز</a>
                                                         <small class="d-block">15 خرداد 1401</small>
@@ -184,7 +186,7 @@
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="blog-image">
-                                        <img alt="" class="img-fluid rounded" src="images/blog/01.jpg">
+                                        <img alt="" class="img-fluid rounded" src="{% static 'images/blog/01.jpg' %}">
                                     </div>
                                 </div>
                                 <div class="col-sm-9">
@@ -204,7 +206,7 @@
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="blog-image">
-                                        <img alt="" class="img-fluid rounded" src="images/blog/02.jpg">
+                                        <img alt="" class="img-fluid rounded" src="{% static 'images/blog/02.jpg' %}">
                                     </div>
                                 </div>
                                 <div class="col-sm-9">
@@ -260,23 +262,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="widget mb-5 text-center">
-                        <div class="widget-newsletter">
-                            <h5 class="widget-title">خبرنامه</h5>
-                            <h6 class="text-primary">به 50,000 مشترک ما بپیوندید!</h6>
-                            <form class="mt-4">
-                                <div class="form-group position-relative">
-                                    <input class="form-control" id="exampleInputEmail1"
-                                        placeholder="ایمیل خود را برای پیوستن وارد کنید" type="email">
-                                    <div class="d-grid">
-                                        <a class="btn btn-gradient rounded mt-2" href="#">ثبت نام</a>
-                                    </div>
-                                </div>
-                                <small class="form-text mt-3 text-muted d-block">به علاوه چیزی جز پیکسل های با کیفیت <a
-                                        href="#!"> <b> سیاست حریم خوصی! </b> </a></small>
-                            </form>
-                        </div>
-                    </div>
                     <div class="widget mb-5">
                         <h5 class="widget-title">دسته بندی ها</h5>
                         <ul class="widget-categories">
@@ -329,7 +314,7 @@
                                 </h5>
                             </div>
                             <div class="blog-box-img"
-                                style="background-image: url(images/portfolio/photography/02.jpg);"></div>
+                                style="background-image: url({% static 'images/portfolio/photography/02.jpg' %});"></div>
                         </div>
                     </div>
                 </div>
@@ -368,7 +353,7 @@
                             <li class="comments">
                                 <div class="comment-avtar">
                                     <div class="avatar">
-                                        <img alt="" class="img-fluid rounded-circle" src="images/avatar/01.jpg">
+                                        <img alt="" class="img-fluid rounded-circle" src="{% static 'images/avatar/01.jpg' %}">
                                     </div>
                                 </div>
                                 <div class="comment-info">
@@ -388,7 +373,7 @@
                             <li class="comments children">
                                 <div class="comment-avtar">
                                     <div class="avatar">
-                                        <img alt="" class="img-fluid rounded-circle" src="images/avatar/02.jpg">
+                                        <img alt="" class="img-fluid rounded-circle" src="{% static 'images/avatar/02.jpg' %}">
                                     </div>
                                 </div>
                                 <div class="comment-info">
@@ -408,7 +393,7 @@
                             <li class="comments">
                                 <div class="comment-avtar">
                                     <div class="avatar">
-                                        <img alt="" class="img-fluid rounded-circle" src="images/avatar/04.jpg">
+                                        <img alt="" class="img-fluid rounded-circle" src="{% static 'images/avatar/04.jpg' %}">
                                     </div>
                                 </div>
                                 <div class="comment-info">

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+دسته بندی ها
+{% endblock title %}
+
+{% block content %}
+
+<section class="slice-ptb">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                {% for category in categories %}
+                    <div class="mb-5 text-center">
+                        <h2>{{ category.name|title }}</h2>
+                    </div>
+                    <!--===== End of Title =====-->
+
+                    <hr class="my-5" />
+                {% endfor %}
+                <!--===== Start of Title =====-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
