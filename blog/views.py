@@ -24,6 +24,8 @@ class DetailView(generic.DetailView):
     template_name = 'blog/blog_single.html'
     # Context name for template
     context_object_name = 'post' 
+
+    queryset = Post.objects.all()
     
 
 # category list view show all categorys in site
