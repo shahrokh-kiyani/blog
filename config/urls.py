@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('blog.urls')),
 ]
 
+# Add all handlers for handling errors with debug mode off
 handler403 = 'pages.views.handler403'
 handler404 = 'pages.views.handler404'
 handler500 = 'pages.views.handler500'

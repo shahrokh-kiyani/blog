@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 
+# All handlers views in here
+
 def handler403(request, exception):
     return render(request, 'pages/403.html')
 
