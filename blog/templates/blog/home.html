@@ -22,11 +22,16 @@
                                 <div class="blog-post-img mb-3">
                                     {% if post.cover %}
                                         <img alt="" class="img-fluid rounded" src="{{ post.cover.url }}">
+
+                                    {% else %}
+
+                                        <img alt="" class="img-fluid rounded" src="{% static 'images/nothing.jpeg' %}">
+                                    
                                     {% endif %}
                                 </div>
                                 <div class="blog-post-info">
                                     <h6 class="mb-0"><a href="#">{{ post.author|title }}</a></h6>
-                                    <span>15 اسفند , 1400</span>
+                                    <span>{{ post.created_date }}</span>
                                 </div>
                             </div>
                             <div class="col-lg-10">
@@ -40,10 +45,15 @@
                                         </li>
                                         <li><a href="#"><i class="far fa-heart pe-1"></i> 6.2 هزار </a></li>
                                     </ul>
-                                    <a class="btn btn-naked btn-icon-right" href="#">ادامه مطلب <i
+                                    <a class="btn btn-naked btn-icon-right" href="{% url 'detail' post.slug %}">ادامه مطلب <i
                                             class="fas fa-angle-left"></i></a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-xl-8">
+                            <hr class="mt-4 mb-5"/>
                         </div>
                     </div>
                 {% endfor %}

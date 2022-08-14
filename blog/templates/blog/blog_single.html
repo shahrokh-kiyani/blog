@@ -19,6 +19,12 @@
                     <div class="blog-image mb-4">
                         {% if post.cover %}
                             <img alt="" class="img-fluid rounded" src="{{ post.cover.url }}">
+                        
+                        {% else %}
+
+                            <img alt="" class="img-fluid rounded" src="{% static 'images/nothing.jpeg' %}">
+                            
+
                         {% endif %}
                     </div>
                     <div class="blog-caption p-0 mt-5">
@@ -33,39 +39,7 @@
                     </div>
                 </div>
                 <p class="mt-4">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
-                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                </p>
-                <p class="mt-4">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
-                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
-                    آینده
-                </p>
-                <figure class="my-5 position-relative">
-                    <blockquote class="blockquote">
-                        <p class="text-dark">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-                            طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
-                            شرایط فعلی تکنولوژی مورد نیاز</p>
-                        <div class="blockquote-footer mt-4 text-primary">
-                            <b> شخصی معروف در <cite title="Source Title">عنوان منبع</cite></b>
-                        </div>
-                    </blockquote>
-                </figure>
-                <p>
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-                </p>
-                <div class="row">
-                    <div class="col-6 my-4">
-                        <img alt="" class="img-fluid rounded" src="{% static 'images/blog/split/04.jpg' %}">
-                    </div>
-                    <div class="col-6 my-4">
-                        <img alt="" class="img-fluid rounded" src="{% static 'images/blog/split/02.jpg' %}">
-                    </div>
-                </div>
-                <p>
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
-                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                    {{ post.body }}
                 </p>
                 <div class="d-flex flex-wrap align-items-center mt-5">
                     <h6 class="mb-sm-0 me-2">برچسب ها:</h6>

@@ -85,8 +85,10 @@
                                 <span class="text-line"> {{user.username|title}} </span>
                             </a>
                             <ul aria-labelledby="navbar-pages" class="dropdown-menu">
-                                <li>
-                                    <a href="{% url 'logout' %}"><span> خروج </span></a>                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item" href="{% url 'logout' %}"><span class="text-line"> خروج
+                                        </span></a>
+                                </li>
                             </ul>
                         </li>
 
@@ -98,38 +100,13 @@
                             </a>
                             <ul aria-labelledby="navbar-pages" class="dropdown-menu">
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> ورود
+                                    <a class="dropdown-item" href="{% url 'login' %}"><span class="text-line"> ورود
                                         </span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="page-login.html"><span class="text-line">
-                                                    ورود </span></a></li>
-                                        <li><a class="dropdown-item" href="{% url 'login' %}"><span class="text-line">
-                                                    ورود ساده </span></a>
-                                        </li>
-                                    </ul>
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> ثبت نام
+                                    <a class="dropdown-item" href="{% url 'signup' %}"><span class="text-line"> ثبت نام
                                         </span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="page-register.html"><span class="text-line">
-                                                    ثبت نام </span></a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="{% url 'signup' %}"><span class="text-line">
-                                                    ثبت نام ساده </span></a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#"><span class="text-line"> فراموشی
-                                            رمز عبور </span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="page-forgot-password.html"><span
-                                                    class="text-line"> فراموشی رمز عبور </span></a></li>
-                                        <li><a class="dropdown-item" href="page-forgot-password-simple.html"><span
-                                                    class="text-line"> فراموشی رمز عبور ساده </span></a></li>
-                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -148,6 +125,7 @@
                                 <i class="feather icon-x"></i>
                             </a>
                             <form class="form-border-bottom w-100">
+                                {% csrf_token %}
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-12">
