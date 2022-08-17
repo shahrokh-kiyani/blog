@@ -6,5 +6,7 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>You Search for ...</h1>
+    {% for post in posts %} 
+        <h1><a href="{% url 'detail' post.slug %}"> {{ post }} </a></h1>
+    {% endfor %}
 {% endblock content %}

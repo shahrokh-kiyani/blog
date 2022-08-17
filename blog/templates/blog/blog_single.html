@@ -141,9 +141,11 @@
                 <div class="main-sidebar">
                     <div class="widget mb-5">
                         <h5 class="widget-title">جستجو</h5>
-                        <form class="mb-3 widget-search">
-                            <input class="form-control" placeholder="جستجو برای چیزی ..." type="email">
+                        <form class="mb-3 widget-search" method="POST" action="{% url 'search' %}">
+                            {% csrf_token %}
+                            <input class="form-control" placeholder="جستجو برای چیزی ..." type="search" name="searched">
                             <a class="search-icon" href="#"> <i class="feather icon-search"></i> </a>
+                            <input type="submit" name="">
                         </form>
                     </div>
                     <div class="widget mb-5">

@@ -124,13 +124,13 @@
                             <a class="close-btn" href="#" id="close-search">
                                 <i class="feather icon-x"></i>
                             </a>
-                            <form class="form-border-bottom w-100">
+                            <form class="form-border-bottom w-100" method="POST" action="{% url 'search' %}">
                                 {% csrf_token %}
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-12">
                                             <input class="form-control bg-transparent" placeholder="دنبال چی میگردی..."
-                                                type="text">
+                                                type="text" name="searched">
                                         </div>
                                     </div>
                                 </div>
