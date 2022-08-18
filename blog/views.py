@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponseNotFound
 
 from .models import *
 
@@ -64,7 +65,11 @@ def search_view(request):
 
         # Here we search database for user search
         post = Post.objects.filter(title__contains=searched)
-        
+
+        # if the post user searched for not found will see 404 html
+        if not post:
+            return HttpResponseNotFound(render(request, 'pages/404.html'))
+
         context = {
             'searched': searched,
             'posts': post
