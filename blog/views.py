@@ -58,6 +58,7 @@ def category_detail_view(request, slug):
 def search_view(request):
 
     if request.method == 'POST':
+        # We give name to input in template and we catch it here
         searched = request.POST['searched']
         # Here we check if user input was nothing we redierct him to 404 page
         if searched == '':
