@@ -41,3 +41,18 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse("detail", kwargs={"slug": self.slug})
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments', verbose_name='پست')
+    name = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name='نویسنده')
+    body = models.TextField(verbose_name='متن')    
+    created_date = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+
+    class Meta:
+        ordering = ['created_date']
+
+    def __str__(self):
+        return self.name
