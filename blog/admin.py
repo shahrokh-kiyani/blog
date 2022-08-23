@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Category, Post
+from .models import Category, Post, Comment
 
 
 # Registerd category in admin
@@ -13,3 +13,6 @@ class CategoryAdmin(admin.ModelAdmin):
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'created_date', 'modified_date', 'category')
 
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'body', 'post', 'created_date', 'active')

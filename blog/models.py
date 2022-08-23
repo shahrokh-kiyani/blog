@@ -52,7 +52,6 @@ class Comment(models.Model):
 
 
     class Meta:
+        verbose_name = 'کامنت'
+        verbose_name_plural = 'کامنت ها'
         ordering = ['created_date']
-
-    def __str__(self):
-        return self.name
