@@ -12,14 +12,16 @@ class ListView(generic.ListView):
     paginate_by = 4
     # Model post in models.py in blog app
     model = Post
-    # Tepmlate name in tepmlates/blog/home.html
+    # Template name in blog/templates/blog/home.html
     template_name = 'blog/home.html'
     # Context name for template
     context_object_name = 'posts'
 
 
+# Used Functional View for comments
 def post_detail_view(request, slug):
     
+    # Query to database 
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.all()
 
@@ -39,19 +41,17 @@ def post_detail_view(request, slug):
         'comments': comments,
         'form': comment_form,
     }
-    print(context['comments'])
-    print(context['post'])
     return render(request, 'blog/blog_single.html', context)
 
     
 
 # category list view show all category's in site
 class CategoryListView(generic.ListView):
-    # Paginate for categorys 
+    # Paginate for Category 
     paginate_by = 10
     # model category from models.py
     model = Category
-    # template name in tepmlates/blog/category_list.html
+    # template name in blog/templates/blog/category_list.html
     template_name = 'blog/category_list.html'
     # context name for template
     context_object_name = 'categories'
@@ -76,7 +76,7 @@ def search_view(request):
     if request.method == 'POST':
         # We give name to input in template and we catch it here
         searched = request.POST['searched']
-        # Here we check if user input was nothing we redierct him to 404 page
+        # Here we check if user input was nothing we redirect to 404 page
         if searched == '':
             return render(request, 'pages/404.html')
 
