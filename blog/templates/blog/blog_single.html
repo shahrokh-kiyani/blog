@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static crispy_forms_tags %}
 
 {% block title %}
 صفحه جزییات
@@ -10,7 +10,6 @@
 
 <!--========== 
   Start of Blog details section ==========-->
-
 <section class="slice-pt blog-single">
     <div class="container">
         <div class="row">
@@ -52,7 +51,7 @@
                 <div class="bg-light d-flex mt-5 p-4 p-sm-5">
                     <img alt="" class="img-fluid rounded-circle avatar-40" src="{% static 'images/avatar/05.jpg' %}">
                     <div class="ms-4">
-                        <h5>نویسنده :‌{{ post.author|title }}</h5>
+                        <h5>نویسنده :{{ post.author|title }}</h5>
                     </div>
                 </div>
                 <div class="mt-5">
@@ -260,118 +259,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h5>03 نظر</h5>
                     <div class="comments-list">
-                        <ul class="list-inline">
-                            <li class="comments">
-                                <div class="comment-avtar">
-                                    <div class="avatar">
-                                        <img alt="" class="img-fluid rounded-circle" src="{% static 'images/avatar/01.jpg' %}">
-                                    </div>
-                                </div>
-                                <div class="comment-info">
-                                    <div class="d-flex flex-wrap align-items-center">
-                                        <h6 class="mb-0">آیری ساتو</h6>
-                                        <a class="replay ms-2" href="#!"> پاسخ <i
-                                                class="feather icon-arrow-left"></i></a>
-                                    </div>
-                                    <span class="date">12 خرداد 1401</span>
-                                    <p class="mt-2 mb-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
-                                        هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
-                                        آینده</p>
-                                </div>
-                            </li>
-                            <li class="comments children">
-                                <div class="comment-avtar">
-                                    <div class="avatar">
-                                        <img alt="" class="img-fluid rounded-circle" src="{% static 'images/avatar/02.jpg' %}">
-                                    </div>
-                                </div>
-                                <div class="comment-info">
-                                    <div class="d-flex flex-wrap align-items-center">
-                                        <h6 class="mb-0">برونو ناش</h6>
-                                        <a class="replay ms-2" href="#!"> پاسخ <i
-                                                class="feather icon-arrow-left"></i></a>
-                                    </div>
-                                    <span class="date">10 اردیبهشت 1401</span>
-                                    <p class="mt-2 mb-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
-                                        هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
-                                        آینده</p>
-                                </div>
-                            </li>
-                            <li class="comments">
-                                <div class="comment-avtar">
-                                    <div class="avatar">
-                                        <img alt="" class="img-fluid rounded-circle" src="{% static 'images/avatar/04.jpg' %}">
-                                    </div>
-                                </div>
-                                <div class="comment-info">
-                                    <div class="d-flex flex-wrap align-items-center">
-                                        <h6 class="mb-0">جی وین جویس</h6>
-                                        <a class="replay ms-2" href="#!"> پاسخ <i
-                                                class="feather icon-arrow-left"></i></a>
-                                    </div>
-                                    <span class="date">02 فروردین 1401</span>
-                                    <p class="mt-2 mb-1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                        سطرآنچنان که لازم است</p>
-                                </div>
-                            </li>
-                        </ul>
+                        {% for comment in comments %}
+                            <ul class="list-inline">
+                                <li class="comments">
+                                        <div class="comment-info">
+                                            <div class="d-flex flex-wrap align-items-center">
+                                                <h6 class="mb-0">{{ comment.name.username|title }}</h6>
+                                            </div>
+                                            <span class="date">{{ comment.created_date }}</span>
+                                            <p class="mt-2 mb-1" >{{ comment.body }}</p>
+                                        </div>
+                                </li>
+                            </ul>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-12 mt-5">
-                    <h5>پاسخ دهید</h5>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-                    <form>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="mb-3">
-                                    <label class="form-label" for="exampleFormControlTextarea1">پیام</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                        placeholder="پیام خود را بنویسید" rows="4"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mb-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            من شرایط و ضوابط را می پذیرم و می دانم که داده های من مطابق با خط مشی
-                                            رازداری به صورت ایمن نگهداری می شوند.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="mb-3">
-                                    <label class="form-label">نام</label>
-                                    <input aria-label="First name" class="form-control"
-                                        placeholder="نام خود را وارد کنید" type="text">
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="mb-3">
-                                    <label class="form-label">ایمیل</label>
-                                    <input aria-label="Last name" class="form-control"
-                                        placeholder="ایمیل خود را وارد کنید" type="text">
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="mb-3">
-                                    <label class="form-label">آدرس سایت</label>
-                                    <input aria-label="Last name" class="form-control"
-                                        placeholder="آدرس سایت را وارد کنید" type="text">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <a class="btn btn-warning rounded" href="#">ارسال نظر</a>
-                            </div>
-                        </div>
+                    <h5>نظر خود رو بنویسید</h5>
+                    <form method="POST" >
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input type="submit">
                     </form>
                 </div>
             </div>

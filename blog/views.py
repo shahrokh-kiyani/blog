@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponseNotFound
 
 from .models import *
+from .forms import CommentForm
 
 
 class ListView(generic.ListView):
@@ -17,19 +18,34 @@ class ListView(generic.ListView):
     context_object_name = 'posts'
 
 
-# Class Detail View for each post
-class DetailView(generic.DetailView):
-    # Model post in models.py in blog app
-    model = Post
-    # Tepmlate name in tepmlates/blog/detail.html
-    template_name = 'blog/blog_single.html'
-    # Context name for template
-    context_object_name = 'post' 
+def post_detail_view(request, slug):
+    
+    post = get_object_or_404(Post, slug=slug)
+    comments = post.comments.all()
 
-    queryset = Post.objects.all()
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+
+        new_comment = comment_form.save(commit=False)
+        new_comment.name = request.user
+        new_comment.post = post
+        new_comment.save()
+
+    else:
+        comment_form = CommentForm()
+
+    context = {
+        'post': post,
+        'comments': comments,
+        'form': comment_form,
+    }
+    print(context['comments'])
+    print(context['post'])
+    return render(request, 'blog/blog_single.html', context)
+
     
 
-# category list view show all categorys in site
+# category list view show all category's in site
 class CategoryListView(generic.ListView):
     # Paginate for categorys 
     paginate_by = 10
