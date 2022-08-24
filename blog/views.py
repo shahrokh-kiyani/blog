@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseNotFound
+from django.contrib.auth import get_user_model
 
 from .models import *
 from .forms import CommentForm
@@ -23,7 +24,7 @@ def post_detail_view(request, slug):
     
     # Query to database 
     post = get_object_or_404(Post, slug=slug)
-    comments = post.comments.all()
+    comments = post.comments.filter(active=True)
 
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
