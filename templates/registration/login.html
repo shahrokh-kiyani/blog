@@ -14,18 +14,18 @@
     <div class="container h-100">
         <div class="row align-items-center h-100 justify-content-center">
             <div class="col-lg-5 col-xl-4 text-center">
-                <a class="navbar-brand" href="index.html"> <img alt="Logo" class="logo" src="{% static 'images/logo.svg' %}"> </a>
+                <a class="navbar-brand" href="{% url 'home' %}"> <img alt="Logo" class="logo" src="{% static 'images/logo.svg' %}"> </a>
                 <div class="bg-white rounded p-5 mt-4">
                     <h2> خوش آمدید</h2>
 
                     <!--===== Start of form =====-->
                     <form class="mt-4" method='POST'>
-                        <div class="d-flex flex-wrap">
+                        <div class="mt-3" >
                             {% csrf_token %}
                             {{ form|crispy }}
-                            <div class="ms-sm-auto mb-3">
-                                <a class="" href="#"> رمز عبور را فراموش کرده اید؟</a>
-                            </div>
+                        </div>
+                        <div class="ms-sm-auto mb-3 mt-2">
+                            <a class="" href="{% url 'password_reset' %}"> رمز عبور را فراموش کرده اید؟</a>
                         </div>
                         <div class="mb-3 d-grid">
                             <button class="btn btn-gradient btn-rounded" type="submit">ورود</button>

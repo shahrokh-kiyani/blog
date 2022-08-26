@@ -57,7 +57,7 @@
             <div class="container-fluid">
 
                 <!--===== Start of logo =====-->
-                <a class="navbar-brand" href="index.html"> <img alt="" class="logo"
+                <a class="navbar-brand" href="{% url 'home' %}"> <img alt="" class="logo"
                         src="{% static 'images/logo-light.svg' %}"> </a>
                 <!--===== End of logo =====-->
 
@@ -78,19 +78,19 @@
                         </li>
 
                         {% if user.is_authenticated %}
-                        <li class="nav-item dropdown ">
-                            {% comment %} <p class="nav-link nav-item"><span class="text-line">{{ user.username|title }}</span></p> {% endcomment %}
-                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-                                data-bs-toggle="dropdown" href="#" id="navbar-pages">
-                                <span class="text-line"> {{user.username|title}} </span>
-                            </a>
-                            <ul aria-labelledby="navbar-pages" class="dropdown-menu">
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item" href="{% url 'logout' %}"><span class="text-line"> خروج
-                                        </span></a>
-                                </li>
-                            </ul>
-                        </li>
+                            <li class="nav-item dropdown ">
+                                {% comment %} <p class="nav-link nav-item"><span class="text-line">{{ user.username|title }}</span></p> {% endcomment %}
+                                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown" href="#" id="navbar-pages">
+                                    <span class="text-line"> {{user.username|title}} </span>
+                                </a>
+                                <ul aria-labelledby="navbar-pages" class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item" href="{% url 'logout' %}"><span class="text-line"> خروج
+                                            </span></a>
+                                    </li>
+                                </ul>
+                            </li>
 
                         {% else %}
                         <li class="nav-item dropdown">

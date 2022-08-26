@@ -13,7 +13,7 @@
     <div class="container h-100">
         <div class="row align-items-center h-100 justify-content-center">
             <div class="col-lg-5 col-xl-4 text-center">
-                <a class="navbar-brand" href="index.html"> <img alt="Logo" class="logo" src="{% static 'images/logo.svg' %}"> </a>
+                <a class="navbar-brand" href="{% url 'home' %}"> <img alt="Logo" class="logo" src="{% static 'images/logo.svg' %}"> </a>
                 <div class="bg-white rounded p-5 mt-4">
                     <h2>ثبت نام</h2>
 
@@ -23,7 +23,7 @@
                             {% csrf_token %}
                             {{ form|crispy }}
                         </div>
-                        <div class="mb-3 d-grid">
+                        <div class="mb-3 d-grid mt-3">
                             <button class="btn btn-gradient btn-rounded" type="submit">ثبت نام</button>
                         </div>
                     </form>
