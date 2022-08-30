@@ -30,6 +30,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, verbose_name='دسته بندی')
     tags = TaggableManager(verbose_name='برچسب ها')
     cover = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='تصویر')
+    active = models.BooleanField(default=False, verbose_name='وضعیت انتشار')
 
     class Meta:
         verbose_name = 'پست'

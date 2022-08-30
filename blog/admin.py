@@ -11,7 +11,7 @@ class CategoryAdmin(admin.ModelAdmin):
 # Registerd Post in admin and filterd by list_display
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'created_date', 'modified_date', 'category')
+    list_display = ('title', 'author', 'created_date', 'modified_date', 'category', 'active',)
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

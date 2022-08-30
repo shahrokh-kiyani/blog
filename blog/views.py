@@ -12,7 +12,7 @@ class ListView(generic.ListView):
     # Paginate for items per page
     paginate_by = 4
     # Model post in models.py in blog app
-    model = Post
+    queryset = Post.objects.filter(active=True)
     # Template name in blog/templates/blog/home.html
     template_name = 'blog/home.html'
     # Context name for template
